@@ -19,7 +19,7 @@ class Simulation(object):
 		self.colors = self.get_colors()
 		self.num_colors = len(self.colors)
 		if not start_pos:
-			self.true_pose = (self.height/2, self.width/2)
+			self.true_pose = (self.height // 2, self.width // 2) # 수정: Python 3.x에서 정수 나눗셈할 때도 실수형으로 합니다 (여기서 정수 필요해수 floor division 해야 합니다)
 		else:
 			self.true_pose = start_pos
 		self.prev_pose = self.true_pose
